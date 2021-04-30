@@ -56,3 +56,12 @@ export function getAllRoutes(
     ? routes
     : [...routes, { component: NotFoundComponent }];
 }
+
+/** @private Strips basename from the given URL so that router can use it normally */
+export function stripBasename(location?: string, basename?: string): any {
+  if (!basename || !location) return location;
+
+  if (location.indexOf(basename) !== 0) return location;
+
+  return location.substr(basename.length);
+}

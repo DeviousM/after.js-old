@@ -16,6 +16,7 @@ export interface DocumentProps {
   data: Promise<any>[];
   renderPage: () => Promise<any>;
   match: Match<any> | null;
+  basename?: string;
 }
 
 export interface CtxBase {

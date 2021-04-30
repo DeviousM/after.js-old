@@ -113,7 +113,7 @@ class Afterparty extends React.Component<AfterpartyProps, AfterpartyState> {
               path={location.pathname}
             />
           )}
-        {initialData && initialData.redirectTo && initialData.redirectTo && (
+        {initialData && initialData.redirectTo && (
           <Redirect to={initialData.redirectTo} />
         )}
         {getAllRoutes(this.props.routes).map((r, i) => (

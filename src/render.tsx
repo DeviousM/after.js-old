@@ -29,6 +29,7 @@ export interface AfterRenderOptions<T> {
   routes: AsyncRouteProps[];
   document?: typeof DefaultDoc;
   customRenderer?: (element: React.ReactElement<T>) => { html: string };
+  basename?: string;
 }
 
 export async function render<T>(options: AfterRenderOptions<T>) {
@@ -39,6 +40,7 @@ export async function render<T>(options: AfterRenderOptions<T>) {
     assets,
     document: Document,
     customRenderer,
+    basename,
     ...rest
   } = options;
   const Doc = Document || DefaultDoc;
@@ -51,7 +53,11 @@ export async function render<T>(options: AfterRenderOptions<T>) {
     });
     const renderer = customRenderer || defaultRenderer;
     const asyncOrSyncRender = renderer(
-      <StaticRouter location={req.url} context={context}>
+      <StaticRouter
+        location={req.url}
+        context={context}
+        basename={basename || ''}
+      >
         {fn(After)({ routes: utils.getAllRoutes(routes), data })}
       </StaticRouter>
     );
@@ -76,7 +82,7 @@ export async function render<T>(options: AfterRenderOptions<T>) {
 
   const { match, data } = await loadInitialProps(
     routes,
-    url.parse(req.url).pathname as string,
+    utils.stripBasename(url.parse(req.url).pathname, basename),
     {
       req,
       res,
@@ -115,6 +121,7 @@ export async function render<T>(options: AfterRenderOptions<T>) {
     data,
     helmet: Helmet.renderStatic(),
     match: reactRouterMatch,
+    basename,
     ...rest,
   });
 

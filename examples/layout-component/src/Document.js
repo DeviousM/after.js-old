@@ -4,7 +4,7 @@ import {
   AfterData,
   AfterScripts,
   AfterStyles,
-} from '@jaredpalmer/after';
+} from '@deviousm/after';
 import Layout from './Layout';
 
 class Document extends React.Component {

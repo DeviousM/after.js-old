@@ -4,7 +4,7 @@ import {
   AfterData,
   AfterScripts,
   AfterStyles,
-} from '@jaredpalmer/after';
+} from '@deviousm/after';
 import { ServerStyleSheets, ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
 

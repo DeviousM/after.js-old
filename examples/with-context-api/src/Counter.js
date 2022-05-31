@@ -1,16 +1,16 @@
-import React from "react";
-import { useCount, useDispatchCount } from "./context/AppContext";
-import "./Home.css";
+import React from 'react';
+import { useCount, useDispatchCount } from './context/AppContext';
+import './Home.css';
 
 const Counter = () => {
   const count = useCount();
   const dispatch = useDispatchCount();
 
-  const handleIncrease = (event) => dispatch({ type: "INCREASE" });
-  const handleDecrease = (event) => dispatch({ type: "DECREASE" });
-  const handleIncrease15 = (event) =>
+  const handleIncrease = event => dispatch({ type: 'INCREASE' });
+  const handleDecrease = event => dispatch({ type: 'DECREASE' });
+  const handleIncrease15 = event =>
     dispatch({
-      type: "INCREASE_BY",
+      type: 'INCREASE_BY',
       payload: 15,
     });
 

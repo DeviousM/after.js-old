@@ -5,13 +5,13 @@ Upgraded react-helmet from version 5 to 6
 ## Update Dependencies
 
 ```bash
-yarn upgrade @jaredpalmer/after react-helmet --latest
+yarn upgrade @deviousm/after react-helmet --latest
 ```
 
 or
 
 ```bash
-npm install @jaredpalmer/after@latest react-helmet@latest --save
+npm install @deviousm/after@latest react-helmet@latest --save
 ```
 
 ## Breaking Changes
@@ -55,13 +55,13 @@ in After.js 2 this problem is solved and it sends all JS and CSS files needed fo
 ## Update Dependencies
 
 ```bash
-yarn upgrade @jaredpalmer/after razzle --latest
+yarn upgrade @deviousm/after razzle --latest
 ```
 
 or
 
 ```bash
-npm install @jaredpalmer/after@latest razzle@latest --save
+npm install @deviousm/after@latest razzle@latest --save
 ```
 
 ## Breaking Changes
@@ -90,7 +90,7 @@ From:
 ```jsx
 // server.js
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { render } from '@deviousm/after';
 import routes from './routes';
 import MyDocument from './Document';
 
@@ -126,7 +126,7 @@ To:
 // server.js
 
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { render } from '@deviousm/after';
 import routes from './routes';
 import MyDocument from './Document';
 
@@ -168,7 +168,7 @@ From:
 // Document.js
 
 import React from 'react';
-import { AfterRoot, AfterData } from '@jaredpalmer/after';
+import { AfterRoot, AfterData } from '@deviousm/after';
 
 class Document extends React.Component {
   static async getInitialProps({ assets, data, renderPage }) {
@@ -225,7 +225,7 @@ import {
   AfterData,
   AfterScripts,
   AfterStyles,
-} from '@jaredpalmer/after';
+} from '@deviousm/after';
 
 class Document extends React.Component {
   static async getInitialProps({ renderPage }) {
@@ -261,10 +261,11 @@ class Document extends React.Component {
   }
 }
 
-export default Document;section
+export default Document;
+section;
 ```
 
-### Top Level API Changes (Skip this  if you used `babel-plugin-after`)
+### Top Level API Changes (Skip this if you used `babel-plugin-after`)
 
 To send assets (CSS and JS files) from the initial server response, we need to change how we define our routes.
 
@@ -274,7 +275,7 @@ From:
 // routes.js
 
 import Home from './Home';
-import { asyncComponent } from '@jaredpalmer/after';
+import { asyncComponent } from '@deviousm/after';
 
 export default [
   {
@@ -305,7 +306,7 @@ To:
 // routes.js
 
 import Home from './Home';
-import { asyncComponent } from '@jaredpalmer/after';
+import { asyncComponent } from '@deviousm/after';
 
 export default [
   {
@@ -408,7 +409,7 @@ There is a limitation with babel plugin, code below won't work with Babel plugin
 
 ```jsx
 import Home from './Home';
-import { asyncComponent } from '@jaredpalmer/after';
+import { asyncComponent } from '@deviousm/after';
 
 const routes = [
   {

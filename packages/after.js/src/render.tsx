@@ -12,6 +12,7 @@ export const render = async <T extends any>(
 
   if (redirect) {
     res.redirect(statusCode, redirect);
+    return html;
   }
 
   res.status(statusCode);

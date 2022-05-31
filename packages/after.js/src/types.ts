@@ -104,6 +104,7 @@ export interface AfterRenderAppOptions<T> {
   routes: AsyncRouteProps[];
   document?: typeof DefaultDoc;
   chunks: Chunks;
+  basename?: string;
   scrollToTop?: boolean;
   ssg?: boolean;
   customRenderer?: (
@@ -151,6 +152,12 @@ export type AfterContext = DocumentProps;
 export interface GetAssetsParams {
   chunks: Chunks;
   route?: AsyncRouteProps<any>;
+}
+
+export interface EnsureReadyParams {
+  routes: AsyncRouteProps[];
+  pathname?: string;
+  basename?: string;
 }
 
 // ES Module type

@@ -39,7 +39,7 @@ routes is an async function and should return all the pages that you want to sta
 ```js
 // ./src/static_export.js
 
-import { renderStatic } from '@jaredpalmer/after';
+import { renderStatic } from '@deviousm/after';
 import appRoutes from './routes';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);

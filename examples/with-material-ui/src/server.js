@@ -1,5 +1,5 @@
 import express from 'express';
-import { render } from '@jaredpalmer/after';
+import { render } from '@deviousm/after';
 import routes from './routes';
 import Document from './Document';
 

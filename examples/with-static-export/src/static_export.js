@@ -1,4 +1,4 @@
-import { renderStatic } from '@jaredpalmer/after';
+import { renderStatic } from '@deviousm/after';
 import appRoutes from './routes';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);

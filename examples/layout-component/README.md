@@ -31,8 +31,9 @@ yarn start
 This is a basic example of how to wrap your pages in layout component (header and footer usually)
 
 we have to add `<Layout />` at two places
-1) Document.js
-2) client.js
+
+1. Document.js
+2. client.js
 
 first create a [custom `Document.js`](https://github.com/jaredpalmer/after.js#custom-document) and then pass your Layout component to `renderPage` fuction:
 
@@ -48,11 +49,13 @@ Document.getInitialProps = async ({ renderPage }) {
   return { ...page };
 }
 ```
+
 and for client side:
+
 ```js
 // client.js
 
-ensureReady(routes).then(data =>
+ensureReady({ routes }).then(data =>
   hydrate(
     <BrowserRouter>
       <Layout>

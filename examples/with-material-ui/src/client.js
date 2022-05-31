@@ -1,7 +1,7 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { ensureReady, After } from '@jaredpalmer/after';
+import { ensureReady, After } from '@deviousm/after';
 import { ThemeProvider } from '@material-ui/core/styles';
 import routes from './routes';
 import theme from './theme';
@@ -23,7 +23,7 @@ function Main({ data }) {
   );
 }
 
-ensureReady(routes).then(data =>
+ensureReady({ routes }).then(data =>
   hydrate(<Main data={data} />, document.getElementById('root'))
 );
 

@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import logo from "./react.svg";
-import "./Home.css";
-import { Link } from "react-router-dom";
-import Counter from "./Counter";
+import React, { Component } from 'react';
+import logo from './react.svg';
+import './Home.css';
+import { Link } from 'react-router-dom';
+import Counter from './Counter';
 
 class Home extends Component {
   static async getInitialProps({ req, res, match, history, location, ...ctx }) {
-    return { whatever: "stuff" };
+    return { whatever: 'stuff' };
   }
 
   render() {
@@ -17,7 +17,7 @@ class Home extends Component {
           <h2>Welcome to After.js</h2>
         </div>
         <p className="Home-intro">
-          To get started, edit <code>src/Home.js</code> or{" "}
+          To get started, edit <code>src/Home.js</code> or{' '}
           <code>src/About.js</code>and save to reload.
         </p>
         <Link to="/about">About -></Link>

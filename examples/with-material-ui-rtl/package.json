@@ -9,7 +9,7 @@
     "start:prod": "NODE_ENV=production node build/server.js"
   },
   "dependencies": {
-    "@jaredpalmer/after": "latest",
+    "@deviousm/after": "latest",
     "@material-ui/core": "^4.12.3",
     "express": "^4.17.1",
     "jss-rtl": "^0.3.0",

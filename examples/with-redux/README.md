@@ -44,7 +44,7 @@ if your redux store state gets removed on every change you make to your code, yo
 // client.js
 
 function renderApp() {
-  ensureReady(routes).then(data =>
+  ensureReady({ routes }).then(data =>
     hydrate(
       <BrowserRouter>
         <Provider store={store}>

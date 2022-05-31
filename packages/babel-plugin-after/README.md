@@ -4,31 +4,31 @@ Babel plugin to add additional chunk info to asyncComponent() in Afterjs.
 
 ## How It's Wokring
 
-1. search for import statements from these paths `'@jaredpalmer/after'` and `'@jaredpalmer/after/asyncComponent'`
+1. search for import statements from these paths `'@deviousm/after'` and `'@deviousm/after/asyncComponent'`
 2. then it finds a local name for `asyncComponent` import statement
 
 ```javascript
 // example1.js
-import { asyncComponent } from '@jaredpalmer/after'; // localname is asyncComponent
+import { asyncComponent } from '@deviousm/after'; // localname is asyncComponent
 
 // example2.js
-import { asyncComponent as foo } from '@jaredpalmer/after'; // localname is foo
+import { asyncComponent as foo } from '@deviousm/after'; // localname is foo
 
 // example3.js
-import asyncComponent from '@jaredpalmer/after/asyncComponent'; // localname is asyncComponent
+import asyncComponent from '@deviousm/after/asyncComponent'; // localname is asyncComponent
 
 // example4.js
-import foo from '@jaredpalmer/after/asyncComponent'; // localname is foo
+import foo from '@deviousm/after/asyncComponent'; // localname is foo
 
 // example5.js
-import { asyncComponent as foo, After } from '@jaredpalmer/after'; // localname is foo
+import { asyncComponent as foo, After } from '@deviousm/after'; // localname is foo
 
 // example6.js
-import { After } from '@jaredpalmer/after'; // there is no `asyncComponent` import so babel plugin skips this file
+import { After } from '@deviousm/after'; // there is no `asyncComponent` import so babel plugin skips this file
 
 // example7.js
-import loader from '@jaredpalmer/after/asyncComponent'; // localname is loader
-import { asyncComponent, After } from '@jaredpalmer/after'; // localname is asyncComponent
+import loader from '@deviousm/after/asyncComponent'; // localname is loader
+import { asyncComponent, After } from '@deviousm/after'; // localname is asyncComponent
 
 // localname = [`loader`, `asyncComponent`] :)
 ```
@@ -40,7 +40,7 @@ import { asyncComponent, After } from '@jaredpalmer/after'; // localname is asyn
 3) the name of property must be `component`
 
 ```javascript
-import { asyncComponent } from '@jaredpalmer/after'; // localname is asyncComponent
+import { asyncComponent } from '@deviousm/after'; // localname is asyncComponent
 
 // let's look for localname (`asyncComponent`) and see where it get called
 // ...

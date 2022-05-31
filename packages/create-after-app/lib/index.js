@@ -51,12 +51,12 @@ function installWithMessageFactory(opts, isExample = false) {
       projectName: projectName,
       projectPath: projectPath,
       packages: isExample
-        ? ['@jaredpalmer/after']
+        ? ['@deviousm/after']
         : [
             'react',
             'react-dom',
             'react-router-dom',
-            '@jaredpalmer/after',
+            '@deviousm/after',
             'express',
           ],
     })

@@ -1,6 +1,6 @@
 {
   "name": "create-after-app",
-  "version": "3.3.3",
+  "version": "3.3.4",
   "description": "CLI tool to bootstrap After.js applications with no configuration",
   "main": "index.js",
   "license": "MIT",

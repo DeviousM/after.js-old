@@ -1,5 +1,5 @@
 {
-  "version": "3.3.3",
+  "version": "3.3.4",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -84,6 +84,6 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
-    "babel-plugin-after-deviousm": "^3.3.3"
+    "babel-plugin-after-deviousm": "^3.3.4"
   }
 }
